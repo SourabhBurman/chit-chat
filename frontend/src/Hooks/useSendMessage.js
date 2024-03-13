@@ -10,7 +10,7 @@ const useSendMessage = () => {
     const sendMessages = async (message) => {
         setLoading(true);
         try {
-            let res = await axios.post(`http://localhost:8080/messages/send/${selectedConversation._id}`, { message }, {
+            let res = await axios.post(`https://chit-chat-lrej.onrender.com/messages/send/${selectedConversation._id}`, { message }, {
                 headers: {
                     "Authorization": `Bearer ${JSON.parse(sessionStorage.getItem('chitchattoken'))}`
                 }

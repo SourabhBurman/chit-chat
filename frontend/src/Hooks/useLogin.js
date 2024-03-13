@@ -24,7 +24,7 @@ function useLogin() {
     return;
    }
     try{
-      let res =await axios.post("http://localhost:8080/users/login",{username,password});
+      let res =await axios.post("https://chit-chat-lrej.onrender.com/users/login",{username,password});
       if(res.data.error) {
         // throw new Error(res.data.error);
         toast.error(res.data.error);

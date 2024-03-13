@@ -12,7 +12,7 @@ const useGetMessage = () => {
     const getMsg = async ()=> {
      setLoading(true);
      try{
-        let res = await axios.get(`http://localhost:8080/messages/get/${selectedConversation._id}`,{
+        let res = await axios.get(`https://chit-chat-lrej.onrender.com/messages/get/${selectedConversation._id}`,{
             headers: {
                 "Authorization": `Bearer ${JSON.parse(sessionStorage.getItem('chitchattoken'))}`
             }

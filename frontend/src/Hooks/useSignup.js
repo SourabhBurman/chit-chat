@@ -26,7 +26,7 @@ const navigate = useNavigate();
    }
    setLoading(true);
    try{
-      let res =await axios.post('http://localhost:8080/users/signup',{
+      let res =await axios.post('https://chit-chat-lrej.onrender.com/users/signup',{
         username,fullname,password,confirmPassword,gender
       })
       if(res.data.error) {

@@ -10,7 +10,7 @@ const useGetConversation = ()=> {
        async function getConvo() {
         setLoading(true);
         try{
-            let res = await axios.get('http://localhost:8080/allUsers',{
+            let res = await axios.get('https://chit-chat-lrej.onrender.com/allUsers',{
                 headers:{
                     "Authorization" : `Bearer ${JSON.parse(sessionStorage.getItem('chitchattoken'))}`
                 }

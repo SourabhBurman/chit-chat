@@ -12,7 +12,7 @@ const useLogout = () => {
   const logout = async()=> {
     setLoading(true);
     try{
-      let res = await axios.post("http://localhost:8080/users/logout",{
+      let res = await axios.post("https://chit-chat-lrej.onrender.com/users/logout",{
         headers: {
           "Authorization": `Bearer ${JSON.parse(sessionStorage.getItem('chitchattoken'))}`
       }
