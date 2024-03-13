@@ -11,7 +11,7 @@ const SocketContextProvider = ({children})=> {
 
     useEffect(()=> {
          if(authuser) {
-            const socket = io("http://localhost:8080",{
+            const socket = io("https://chit-chat-lrej.onrender.com/",{
                 query :{userId : authuser._id}
             });
             setSocket(socket);
